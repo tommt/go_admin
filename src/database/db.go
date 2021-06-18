@@ -9,7 +9,6 @@ import (
 )
 
 var DB *gorm.DB
-
 var sqlDB *sql.DB
 
 func Connect() {

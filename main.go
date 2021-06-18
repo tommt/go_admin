@@ -2,6 +2,7 @@ package main
 
 import (
 	"go_admin/src/database"
+	"go_admin/src/routes"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -11,9 +12,6 @@ func main() {
 	// database.AutoMigrateDB()
 	app := fiber.New()
 
-	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Hello Daju sanchai ho")
-	})
-
+	routes.Setup(app)
 	app.Listen(":8000")
 }
