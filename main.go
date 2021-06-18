@@ -8,10 +8,11 @@ import (
 
 func main() {
 	database.Connect()
+	// database.AutoMigrateDB()
 	app := fiber.New()
 
 	app.Get("/", func(c *fiber.Ctx) error {
-		return c.SendString("Hello Daju!!")
+		return c.SendString("Hello Daju sanchai ho")
 	})
 
 	app.Listen(":8000")
